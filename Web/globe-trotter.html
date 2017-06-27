@@ -1,0 +1,127 @@
+<!--
+Globe Trotter
+A tangible and interactive picture viewer
+An original idea by Caroline Buttet
+www.carolinebuttet.ch
+
+Globe Troter is an interactive display for holiday pictures. 
+It works with Arduino and is connected to the computer via an usb cable. 
+The webpage displays the photos. 
+The webpage works with the library Jquery (for animations and transitions), and dynamically updates images when keyboard signals are sensed (via the script.js script). 
+-->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>GLOBE TROTTER</title>
+  <meta name="Globe Trotter" content="Globe Trotter">
+  <meta name="Caroline Buttet" content="www.carolinebuttet.ch">
+
+  <link rel="stylesheet" href="stylesheet.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+	<div class="container" id="gameArea">
+			<!-- Nothing here, everyting is updated and displayed via javascript. -->
+	</div>
+
+<!-- WE INCLUDE JQUERY LIBRARY-->
+ <script src="libs/jquery-2.0.2.min.js"></script>
+
+<!--WE CREATE ALL THE HTML CONTENT TO BE DISPLAYED VIA JAVASCRIPT-->	
+
+<!-- STEP 1-->
+<!--INTIAL WELCOME SCREEN : PICK A COUNTRY -->
+ <script id="welcome-screen-pick-country" type="text/template">
+      <div class="title-container adjust-landscape" id="main-pick-country">
+        <img src="data/pick-country.png">
+      </div>
+ </script>
+
+<!-- STEP 2-->
+<!-- COVER BY COUNTRY (you need to make one cover by country.)-->
+
+<!--COVER ETHIOPIA -->
+ <script id="ethiopiaTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <!--This is the optional "cover title"-->
+      <img src="data/ethiopia.png">
+    </div>
+ </script>
+
+<!--COVER  NAMIBIA-->
+  <script id="namibiaTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/namibia.png">
+    </div>
+ </script>
+
+<!--COVER  MADA-->
+  <script id="madagascarTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/madagascar.png">
+    </div>
+ </script>
+
+<!--COVER  FRANCE-->
+  <script id="franceTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/france.png">
+    </div>
+ </script>
+ <!--COVER  VIETNAM-->
+  <script id="vietnamTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/vietnam.png">
+    </div>
+ </script>
+ <!--COVER  PHILIPPINES-->
+  <script id="philippinesTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/philippines.png">
+    </div>
+ </script>
+ <!--COVER  JAPAN-->
+  <script id="japanTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/japan.png">
+    </div>
+ </script>
+ <!--COVER  CHINA-->
+  <script id="chinaTitle" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/china.png">
+    </div>
+ </script>
+
+<!-- STEP 3-->
+<!--COVER  "SPIN TO START" stays for X seconds.-->
+  <script id="spinToStart" type="text/template">
+    <div class="title-container adjust-landscape">
+      <img src="data/spin.png">
+    </div>
+ </script>
+
+<!-- STEP 4-->
+ <!--ALBUM SCREEN: DISPLAYS THE PHOTOS OF THE SELECTED COUNTRY.-->
+  <script id="albumScreen" type="text/template">
+    <div class="advice-container top-left">
+      <img src="data/advice-1.png">
+    </div>
+    <div class="advice-container bottom-right">
+        <img src="data/advice-2.png">
+    </div>
+ </script>
+
+<!--LOADING THE MAIN SCRIPT TO EXECUTE OUR ACTIONS-->
+ <script src="script.js"></script>
+</body>
+</html>

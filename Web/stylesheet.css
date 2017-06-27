@@ -1,0 +1,44 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background: url("data/background.JPG") no-repeat center center fixed;
+	min-width: 768px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.container{
+	width:90vw;
+	height:90vh;
+	margin:auto;
+	margin-top:5vh;
+}
+.container img{
+	width:100%;
+	height:auto;
+}
+.adjust-landscape img{
+	height:70vh;
+	width:auto;
+	left:50%;
+	top:50%;
+	position:absolute;
+	-ms-transform: translate(-50%,-50%); /* IE 9 */
+   	-webkit-transform: translate(-50%,-50%); /* Safari */
+    transform: translate(-50%,-50%);
+}
+
+.top-left{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+
+.bottom-right{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
